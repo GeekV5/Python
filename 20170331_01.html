@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="init()">
+</body>
+<script>
+    var socket;
+    function init() {
+        var host="ws://localhost:3336/";
+        try {
+//            socket = new WebSocket(host);
+            socket =new WebSocket(host);
+            socket.onopen=function (msg) {
+                console.log('onopen:'+msg);
+            }
+             socket.onmessage=function (msg) {
+                alert('onmessage:'+msg.data);
+            }
+//            socket.onclose=function (msg) {
+//                console.log('close'+msg);
+//            }
+        }
+        catch (ex){
+            console.log('Ex:'+ex);
+        }
+    }
+
+</script>
+</html>
