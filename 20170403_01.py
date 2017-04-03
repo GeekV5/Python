@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #-*- coding:UTF-8 -*-
 import smtplib
-# Python SMTP 发送邮件
+# Python SMTP 发送邮件,本机需要有sendmail
 from email.mime.text import MIMEText
 from email.header import Header
 
